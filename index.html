@@ -174,7 +174,20 @@
                 background: #f4f6f8;
                 border-radius: 8px;
                 font-size: 14px;
-            }  
+            } 
+            .dropdown-btn::after {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 6px solid white;
+            }
+            .card-extra {
+                display: none;
+            }
         </style> 
     </head> 
     <body> 
@@ -298,6 +311,15 @@ async function generatePDF() {
 
   pdf.save("cards.pdf");
 }
+        function toggleCard(element) {
+            const card = element.closest(".card");
+            const extra = card.querySelector(".card-extra");
+            if (extra.style.display === "block") {
+                extra.style.display = "none";
+            } else {
+                extra.style.display = "block";
+            }
+        }
     </script>
     </body>
 </html>
