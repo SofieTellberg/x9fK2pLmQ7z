@@ -188,6 +188,26 @@
             .card-extra {
                 display: none;
             }
+            /*Plus-knapp*/
+            .add-btn {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: none;
+                background: #004412;
+                color: white;
+                font-size: 22px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+                transition: 0.2s;
+            }
+            .add-btn:hover {
+                background: #21867a;
+                transform: scale(1.1);
+            }
         </style> 
     </head> 
     <body> 
@@ -244,6 +264,7 @@
                             <div class="comment">💬 1</div> 
                         </div> 
                     </div>
+                    <button class="add-btn">+</button>
                 </div> 
                 <div class="column"> 
                     <h3>Ekonomi</h3> 
