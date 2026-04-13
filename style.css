@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+/*Alla element på sidan*/
+* {
+    font-family: Arial, sans-serif;
+}
+
+/*Sidebar*/
+#sidebar {
+    background-color: #004412;
+    width: 260px; /* bredd på sidebaren */
+    padding: 20px; /* mellanrum inuti (luft runt innehållet) */
+
+    position: fixed; /* elementet sitter fast och rör sig inte när jag scrollar*/
+    top: 0; /* div börjar längst upp */
+    left: 0; /* div placeras till vänster */
+    height: 100vh; /* tar med hela skärmens höjd i beaktning */
+
+    display: flex; /* använder flexbox */
+    flex-direction: column; /* staplar innehåll vertikalt */
+    align-items: center; /* centrerar innehåll horisontellt */
+}
+
+#sidebar_section {
+    background-color: #004412;
+}
+
+#favorite {
+    color:white
+}
+
+#BH {
+    max-width: 80%;
+}
+
+/* Huvudbakgrunden med dess div:ar*/
+.main {
+    background-color: white;
+}
+
+.topbar {
+    background-color: white;
+    margin-left: 320px;
+    padding-top: 10px;
+}
+
+#rubrik {
+    color:black;
+}
+
+/*coulmner eller kontrollpunkter*/
+.column {
+    background-color: #D8E0D2;
+    border-radius: 12px;
+    padding: 15px;
+
+    width: 300px;
+    margin-bottom: 20px; /*skapar mellanrum vid slutet av kontrollpunkternas tabell*/
+}
+
+h3 {
+    color: black;
+}
+
+.board {
+    margin-left: 320px;
+    margin-top: 40px;
+
+    display: flex; /*ordnas automatiskt i rad eller kolumn*/
+    gap: 20px; /*skapar mellanrum mellan alla card senare*/
+}
+
+.column:last-child {
+    margin-right: 20px; /*skapar mellanrum på kontrollcolumnen lägst ut*/
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.open-btn {
+    background-color: #004412;
+    color:white;
+    border: none;
+    width: 35px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+#open.btn:hover{
+    background-color: white; /*kolla på denna*/
+    transform: scale(1.05);
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    border-radius: 20px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #004412;
+    color: white;
+    border-radius: 50%;
+}
+
+#modal-text {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#modal-desc {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+#modal-desc::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #004412;
+    margin: 10px auto 0 auto;
+}
+
+.task {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*To do listan*/
+#add-task-btn {
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #004412;
+    color: white;
+    border-radius: 20%;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#comment-input {
+    width: 80%;
+    height: 100px;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+#comments {
+    text-align: center;
+}
+
+#save-comment-btn {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    
+    background-color: #004412;
+    color: white;
+    
+    border: none;
+    border-radius: 8px;
+    
+    font-size: 14px;
+    cursor: pointer;
+    
+    transition: 0.2s;
+
+}
+
+.pdf-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    background-color: #004412;
+    color: white;
+    font-size: 24px;
+
+    border: none;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.sidebar-footer {
+position: absolute;
+bottom: 20px;
+right: 20px;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    background-color: #004412;
+    color: white;
+    font-size: 24px;
+
+    border: none;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
